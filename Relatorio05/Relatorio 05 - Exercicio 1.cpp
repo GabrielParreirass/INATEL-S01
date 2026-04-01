@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int fibonacci(int n) {
+    if (n == 0) {
+        return 0;
+    }
+    if (n == 1) {
+        return 1;
+    }
+    
+    return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+int main() {
+    int n;
+
+    cout << "Digite um numero n para calcular a sequencia de Fibonacci: " << endl;
+    cin >> n;
+
+    if (n < 0) {
+        cout << "Por favor, digite um numero maior ou igual a 0." << std::endl;
+    } else {
+        
+        int resultado = fibonacci(n);
+        cout << "O " << n << " numero de Fibonacci e: " << resultado << std::endl;
+    }
+
+    return 0;
+}
